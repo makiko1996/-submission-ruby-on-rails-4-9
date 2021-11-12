@@ -1,6 +1,12 @@
 <h1>EditingBook</h1>
+<% if @book.errors.any? %>
+ <%= @book.errors.count %>error prohibited this book from being saved:
+ <% @book.errors.full_messages.each do |message| %>
+  <%= message %>
+ <% end %>
+<% end %>
 
-<%= form_with model:@book, url:"book_path(book.id)", local:true do |f| %>
+<%= form_with model:@book, url:book_path(@book), local:true do |f| %>
  <h4>Title</h4>
  <%= f.text_field :title %>
  <h4>Body</h4>
@@ -8,5 +14,5 @@
  <%= f.submit 'Update Book' %>
 <% end %>
 <!--show url check-->
-<%= link_to "Show", books_index_path%>
+<%= link_to "Show", book_path(@book) %>
 <%= link_to "back", books_index_path %>
