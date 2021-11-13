@@ -9,14 +9,22 @@
   <% end %>
   
   <%= form_with model:@book, url:book_path(@book), local:true do |f| %>
-   <h4>Title</h4>
-   <%= f.text_field :title %>
-   <h4>Body</h4>
-   <%= f.text_area :body %>
-   <%= f.submit 'Update Book' %>
+   <div class="field">
+    <p class="input_box">Title</p>
+    <%= f.text_field :title %>
+   </div>
+   <div class="field">
+    <p class="input_box">Body</p>
+    <%= f.text_area :body %>
+   </div>
+   
+   <div class="button">
+    <%= f.submit 'Update Book' %>
+   </div> 
   <% end %>
   <!--show url check-->
   <%= link_to "Show", book_path(@book) %>
-  <%= link_to "back", books_index_path %>
+  |
+  <%= link_to "back", index_book_path %>
  
 </body>

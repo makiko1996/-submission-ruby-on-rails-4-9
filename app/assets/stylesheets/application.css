@@ -39,7 +39,15 @@ span ,strong {
 }
 
 p ,a {
+  margin: 33px 0;
+}
+
+.top_body {
   margin: 33px;
+}
+
+.main_view {
+  margin: 17.42px;
 }
 
 table {
@@ -78,6 +86,15 @@ h2 {
   margin-bottom: 10px;
 }
 
+.input_box {
+  display: block;
+  margin: 0;
+}
+
 input {
   padding: 1px 2px;
+}
+
+.button {
+  display: block;
 }

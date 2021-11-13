@@ -1,6 +1,6 @@
 <body>
 
-  <h1>Books</h1>
+  <h1 class="main_view">Books</h1>
   
   <table>
     <thead>
@@ -40,13 +40,16 @@
   
   <%= form_with model: @book, url:'/books', local:true do |f| %>
    <div class="field">
-     <h5>Title</h5>
+     <p class="input_box">Title</p>
      <%= f.text_field :title %>
    </div>
    <div class="field">
-     <h5>Body</h5>
+     <p class="input_box">Body</p>
      <%= f.text_area :body %>
-     <%= f.submit'Create Book' %>
+     
+     <div class="button">
+      <%= f.submit'Create Book' %>
+     </div>
    </div>
   <% end %>
     
